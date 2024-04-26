@@ -4,6 +4,7 @@ import 'package:testbizz/form/bankScreen.dart';
 import 'package:testbizz/form/binding.dart';
 import 'package:testbizz/form/formScreen.dart';
 import 'package:testbizz/otpvarify/otpScreen.dart';
+import 'package:testbizz/profileScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,12 +19,12 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      initialBinding: bindingg(),
+      //initialBinding: bindingg(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: formScreen(),
+      home: profileScreen(),
     );
   }
 }

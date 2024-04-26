@@ -331,6 +331,28 @@ class formScreen extends GetView<formcontrroller> {
                         SizedBox(
                           height: h * .03,
                         ),
+                        Text("Discripton"),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Container(
+                          
+                          height: h*.1,
+                          width: w,
+                          child: TextField(
+                            controller: controller.discp,
+                            minLines: null,
+                            maxLines: null,
+                            expands: true,
+                               // controller: _controller,
+                                // keyboardType: TextInputType.multiline,
+                                // maxLines: null, // Allows unlimited lines
+                                decoration: InputDecoration(
+                                  hintText: 'Enter your description here...',
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                        )
                       ],
                     ),
                   ),
@@ -339,6 +361,7 @@ class formScreen extends GetView<formcontrroller> {
               InkWell(
                 onTap: () {
                   if (_formKey.currentState!.validate()) {
+                    controller.formStatus.value = RxStatus.empty();
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => bankScreen()));
                   }
